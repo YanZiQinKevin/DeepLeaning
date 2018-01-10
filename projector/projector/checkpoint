@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/yanziqin/jupyter/projector/projector/a_model.ckpt-1001"
+all_model_checkpoint_paths: "/Users/yanziqin/jupyter/projector/projector/a_model.ckpt-1001"
