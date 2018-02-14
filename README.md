@@ -19,4 +19,5 @@ train_step=tf.train.GradientDescentOptimizer(0.1).minimize(loss)
 Final Result of Handwritten digit recognition:
 ![enter image description here](https://github.com/YanZiQinKevin/TensorFlow/blob/master/screenshoot/number1.png)
 
+用图形化显示 “手写数字”分类的结果
 ![enter image description here](https://github.com/YanZiQinKevin/TensorFlow/blob/master/screenshoot/number2.png)
