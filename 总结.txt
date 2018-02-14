@@ -1,0 +1,36 @@
+Linear regression: Weight Features(known) Target 
+	Target = Weight * Features
+	cost= (prediction-real)
+
+Logistic Regression: 逻辑回归， 用于binary的判断
+			h(theta) = 1/(1+exp(-theta * x))
+			注意： logistic Regression 的cost function 也不一样
+
+Gradient Descent: cost = square(prediction-real)	
+					   = square(W * x - y)
+					   = square(wx)
+
+结果是一个一元二次函数，函数每个点的切线称之为梯度，当梯度斜率为0时，为optimal solution
+学习速率 Leaning rate 则影响了“点”每次下降移动的距离
+
+
+Convolutional Neural Network:
+	convolution layer(卷积层):
+
+	Filter size and Stride , conver all original image  
+
+	Relu layer(线性整流层)：
+	f(x) =max(0,x)
+	在某一点之前为0，只后为线性，用于激活函数
+
+	pooling layer （池化层）:
+	用filters 找最大值
+
+	fully connected layer（全连接层): 
+	support : Pooling 5 * 5 *3 我们可以转化为 1 * 75
+			  Fully Connected 75 *2
+			  //两矩阵相乘
+			 Thus: output 1 * 2 
+
+
+	得到的结果是调整滤镜矩阵的参数
