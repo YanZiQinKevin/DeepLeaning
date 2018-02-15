@@ -10,9 +10,21 @@ Gradient Descent: cost = square(prediction-real)
 					   = square(W * x - y)
 					   = square(wx)
 
-结果是一个一元二次函数，函数每个点的切线称之为梯度，当梯度斜率为0时，为optimal solution
-学习速率 Leaning rate 则影响了“点”每次下降移动的距离
+	结果是一个一元二次函数，函数每个点的切线称之为梯度，当梯度斜率为0时，为optimal solution
+	学习速率 Leaning rate 则影响了“点”每次下降移动的距离
 
+Activation function:
+	y=AF(Wx) 
+	AF: relu sigmoid, tanh  (可微分)
+
+Overfitting:
+	误差太小
+	数据太少
+	1,regularization:
+		L1: cost= square(Wx -real y) + abs(W)
+		L2: cost= square(Wx -real y) + square(W)
+
+	2,dropout: 随机忽略一些节点
 
 Convolutional Neural Network:
 	convolution layer(卷积层):
@@ -27,10 +39,26 @@ Convolutional Neural Network:
 	用filters 找最大值
 
 	fully connected layer（全连接层): 
-	support : Pooling 5 * 5 *3 我们可以转化为 1 * 75
+	Assume : Pooling 5 * 5 *3 我们可以转化为 1 * 75
 			  Fully Connected 75 *2
 			  //两矩阵相乘
 			 Thus: output 1 * 2 
 
 
 	得到的结果是调整滤镜矩阵的参数
+
+
+Recurrent Neural Networl:
+	预测顺序排列
+	用于翻译、手写输入、对于图片生成一句话。
+	每个参数的前后有逻辑关系
+	ht=fw(ht-1, xt)
+	ht= tanh(Whh ht-1 + Wxh xt)
+	yt=Why ht
+LSTM: long Short-Term Memory (忘记控制)
+
+Backpropagation 算法
+反方向 （输出层->隐藏层->输入层）来最小化误差 error 来更新每个连接的weight
+4个公式
+
+
