@@ -1,3 +1,20 @@
+Supervised learning
+	prediction
+	Classification(discrete labels), Regression(real value)
+Unsupervised learning
+	Clustering
+	probability
+	Finding association
+	Dimension reduction
+
+Linear classifier
+	Perceptron
+	Logistic regression
+	Support vector machine
+
+
+
+
 Linear regression: Weight Features(known) Target 
 	Target = Weight * Features
 	cost= square(prediction-real)
@@ -25,7 +42,8 @@ Overfitting:
 		L2: cost= square(Wx -real y) + square(W)
 
 	2,dropout: 随机忽略一些节点
-
+	3, batch normalization
+	4, early stopping
 Convolutional Neural Network:
 	convolution layer(卷积层):
 
@@ -66,6 +84,7 @@ Backpropagation 算法 (BP算法)
 无监督： 聚类(Kmeans)
 
 聚类：
+kmeans: Iteratively reassion points
 input k,data[n]:
 1,选择k个初始中心点，c[0]=data[0].c[k-1]=data[k-1]
 2，对于data[0]..data[n],分别与c[0],c[k-1]比较，假定与c[i]差值最少，标记为i
@@ -74,4 +93,15 @@ input k,data[n]:
 缺点：初始点的选择有关，局部优化，需要k值
 
 感知器分类算法
+Classifiers: Nearest neighbor
+	KNN: How large the k is
+	1-NN provable has error that is at most twice Bayes optimal error
+Generalization 
+	Components of generalization error
+Bias: how much the average model over all training sets differ from the the model 
+Veriance: how much models estimated from different training sets differ from each oher
+underfitting: model is too simple to represent all the relevant class characteristics
+	high bias and low variance
+	high training error and high test error
+
 
